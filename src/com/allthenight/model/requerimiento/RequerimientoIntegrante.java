@@ -12,6 +12,7 @@ public class RequerimientoIntegrante extends Requerimiento {
 	private Raza raza;
 	
 	private List<Exigencia> exigencias = new ArrayList<Exigencia>();
+	private Integer integrantesNecesario;
 
 	public Raza getRaza() {
 		return raza;
@@ -38,7 +39,19 @@ public class RequerimientoIntegrante extends Requerimiento {
 	@Override
 	public Boolean esComplicadoPara(Grupo grupo) {
 		// TODO Auto-generated method stub
-		return null;
+	 Integer integrantes = grupo.getViajeros().size();
+		if(getIntegrantesNecesario()-integrantes <=0){
+			return Boolean.TRUE;
+		}
+		return Boolean.FALSE;
+	}
+
+	public Integer getIntegrantesNecesario() {
+		return integrantesNecesario;
+	}
+
+	public void setIntegrantesNecesario(Integer integrantesNecesario) {
+		this.integrantesNecesario = integrantesNecesario;
 	}
 
 }
