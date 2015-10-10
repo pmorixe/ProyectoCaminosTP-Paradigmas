@@ -1,8 +1,8 @@
-package com.allthenight.model.requerimiento;
+package com.allthenight.requerimiento.model;
 
-import com.allthenight.model.Elemento;
-import com.allthenight.model.Grupo;
-import com.allthenight.model.Viajero;
+import com.allthenight.grupo.model.Elemento;
+import com.allthenight.grupo.model.Grupo;
+import com.allthenight.grupo.model.Viajero;
 
 public class RequerimientoElemento extends Requerimiento {
 

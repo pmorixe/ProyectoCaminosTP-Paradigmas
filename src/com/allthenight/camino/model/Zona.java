@@ -1,10 +1,10 @@
-package com.allthenight.model.camino;
+package com.allthenight.camino.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.allthenight.model.Grupo;
-import com.allthenight.model.requerimiento.Requerimiento;
+import com.allthenight.grupo.model.Grupo;
+import com.allthenight.requerimiento.model.Requerimiento;
 
 public class Zona {
 	

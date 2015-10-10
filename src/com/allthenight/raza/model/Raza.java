@@ -1,4 +1,4 @@
-package com.allthenight.model.raza;
+package com.allthenight.raza.model;
 
 public class Raza {
 	/*-------Atributos------------------*/

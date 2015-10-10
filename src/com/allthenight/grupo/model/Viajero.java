@@ -1,9 +1,9 @@
-package com.allthenight.model;
+package com.allthenight.grupo.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.allthenight.model.raza.Raza;
+import com.allthenight.raza.model.Raza;
 
 public class Viajero {
 	/*-------Atributos------------------*/
@@ -11,7 +11,7 @@ public class Viajero {
 	private Integer nivel;
 	private List<Elemento> elementos = new ArrayList<Elemento>();
 	private Raza raza;
-	/*----------Metodos-------------------*/
+	/*----------Metodos-------------------*/ 
 	public Integer getVida() {
 		return vida;
 	}
@@ -38,6 +38,14 @@ public class Viajero {
 	}
 	public boolean tiene(Elemento elemento) {
 		return elementos.contains(elemento);
+	}
+	public Viajero equiparElemento(Elemento elemento) {
+		elementos.add(elemento);
+		return this;
+	}
+	public Viajero equiparElementos(List<Elemento> elementos) {
+		elementos.addAll(elementos);
+		return this;
 	}
 	
 }

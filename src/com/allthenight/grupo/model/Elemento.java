@@ -1,11 +1,8 @@
-package com.allthenight.model;
+package com.allthenight.grupo.model;
 
 public class Elemento {
 /*-------Atributos---------------*/	
 	private String nombre;
-
-	public Elemento(String string) {
-	}
 
 	/*-------Metodos------------------*/
 	public String getNombre() {

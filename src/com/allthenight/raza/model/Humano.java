@@ -1,6 +1,6 @@
-package com.allthenight.model.raza;
+package com.allthenight.raza.model;
 
-import com.allthenight.model.camino.Zona;
+import com.allthenight.camino.model.Zona;
 
 public class Humano extends Raza {
 	/*-----------Metodos------------*/

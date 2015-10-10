@@ -1,11 +1,11 @@
-package com.allthenight.model.requerimiento;
+package com.allthenight.requerimiento.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.allthenight.model.Grupo;
-import com.allthenight.model.Viajero;
-import com.allthenight.model.raza.Raza;
+import com.allthenight.grupo.model.Grupo;
+import com.allthenight.grupo.model.Viajero;
+import com.allthenight.raza.model.Raza;
 
 public class RequerimientoIntegrante extends Requerimiento {
 	

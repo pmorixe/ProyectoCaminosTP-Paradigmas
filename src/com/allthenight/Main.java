@@ -1,10 +1,10 @@
 package com.allthenight;
 
-import com.allthenight.model.camino.Zona;
-import com.allthenight.model.requerimiento.Exigencia;
-import com.allthenight.model.requerimiento.ExigenciaMagia;
-import com.allthenight.model.requerimiento.ExigenciaNivel;
-import com.allthenight.model.requerimiento.ExigenciaVelocidad;
+import com.allthenight.camino.model.Zona;
+import com.allthenight.requerimiento.model.Exigencia;
+import com.allthenight.requerimiento.model.ExigenciaMagia;
+import com.allthenight.requerimiento.model.ExigenciaNivel;
+import com.allthenight.requerimiento.model.ExigenciaVelocidad;
 
 public class Main {
 

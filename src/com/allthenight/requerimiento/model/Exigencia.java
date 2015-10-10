@@ -1,4 +1,4 @@
-package com.allthenight.model.requerimiento;
+package com.allthenight.requerimiento.model;
 
 public interface Exigencia {
 	

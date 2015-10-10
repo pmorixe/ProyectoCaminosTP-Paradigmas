@@ -1,4 +1,4 @@
-package com.allthenight.model;
+package com.allthenight.grupo.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +33,21 @@ public class Grupo {
 		}
 		
 		return i;
+	}
+	
+	public Grupo sumarAlGrupo(Viajero obtenerHumano) {
+		viajeros.add(obtenerHumano);
+		return this;
+	}
+	
+	public Grupo sumarAlGrupo(List<Viajero> viajeros) {
+		viajeros.addAll(viajeros);
+		return this;
+	}
+	
+	public Grupo incorporarGrupo(Grupo grupo) {
+		viajeros.addAll(grupo.getViajeros());
+		return this;
 	}
 
 }
