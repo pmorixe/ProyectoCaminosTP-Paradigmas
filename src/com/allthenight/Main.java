@@ -1,10 +1,10 @@
 package com.allthenight;
 
-import com.allthenight.model.Exigencia;
-import com.allthenight.model.ExigenciaVelocidad;
-import com.allthenight.model.ExigenciaMagia;
-import com.allthenight.model.ExigenciaNivel;
-import com.allthenight.model.Zona;
+import com.allthenight.model.camino.Zona;
+import com.allthenight.model.requerimiento.Exigencia;
+import com.allthenight.model.requerimiento.ExigenciaMagia;
+import com.allthenight.model.requerimiento.ExigenciaNivel;
+import com.allthenight.model.requerimiento.ExigenciaVelocidad;
 
 public class Main {
 
@@ -18,6 +18,7 @@ public class Main {
 		
 		
 		Zona zona = new Zona();
+		Integer aspereza = zona.getAspereza();
 
 	}
 

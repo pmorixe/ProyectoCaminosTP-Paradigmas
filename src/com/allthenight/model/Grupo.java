@@ -25,4 +25,14 @@ public class Grupo {
 		this.viajeros = viajeros;
 	}
 
+	public Integer obtenerCantidadDe(Elemento elemento) {
+		int i = 0;
+		for (Viajero viajero : viajeros) {
+			if (viajero.tiene(elemento))
+				i++;
+		}
+		
+		return i;
+	}
+
 }

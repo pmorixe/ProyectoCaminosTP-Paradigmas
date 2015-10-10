@@ -1,6 +1,9 @@
-package com.allthenight.model;
+package com.allthenight.model.requerimiento;
 
 import java.util.List;
+
+import com.allthenight.model.Grupo;
+import com.allthenight.model.Viajero;
 
 public abstract class Requerimiento {
 	

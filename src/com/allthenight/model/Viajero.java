@@ -3,6 +3,8 @@ package com.allthenight.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.allthenight.model.raza.Raza;
+
 public class Viajero {
 	/*-------Atributos------------------*/
 	private Integer vida;
@@ -33,6 +35,9 @@ public class Viajero {
 	}
 	public void setRaza(Raza raza) {
 		this.raza = raza;
+	}
+	public boolean tiene(Elemento elemento) {
+		return elementos.contains(elemento);
 	}
 	
 }

@@ -1,4 +1,4 @@
-package com.allthenight.model;
+package com.allthenight.model.camino;
 
 import java.util.ArrayList;
 import java.util.List;

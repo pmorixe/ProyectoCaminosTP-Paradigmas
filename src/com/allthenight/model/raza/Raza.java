@@ -1,10 +1,10 @@
-package com.allthenight.model;
+package com.allthenight.model.raza;
 
 public class Raza {
 	/*-------Atributos------------------*/
-	private Integer fuerza;
-	private Boolean magia;
-	private Integer velocidad;
+	protected Integer fuerza;
+	protected Boolean magia;
+	protected Integer velocidad;
 	/*----------Metodos-------------------*/
 	public Integer getFuerza() {
 		return fuerza;

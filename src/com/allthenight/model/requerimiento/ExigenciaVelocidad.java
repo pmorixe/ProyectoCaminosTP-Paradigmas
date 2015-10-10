@@ -1,4 +1,4 @@
-package com.allthenight.model;
+package com.allthenight.model.requerimiento;
 
 public class ExigenciaVelocidad implements Exigencia {
 

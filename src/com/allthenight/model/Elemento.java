@@ -3,7 +3,11 @@ package com.allthenight.model;
 public class Elemento {
 /*-------Atributos---------------*/	
 	private String nombre;
-/*-------Metodos------------------*/
+
+	public Elemento(String string) {
+	}
+
+	/*-------Metodos------------------*/
 	public String getNombre() {
 		return nombre;
 	}
