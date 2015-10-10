@@ -87,6 +87,20 @@ public class Zona {
 	}
 
 
+
+	public Boolean esComplicadaPara(Grupo grupo) {
+		
+		Boolean esComplicada= Boolean.FALSE;
+		
+		for (Requerimiento requerimiento : requerimientos) {
+			if (requerimiento.esComplicadoPara(grupo))
+				return Boolean.TRUE;
+		}
+		
+		return esComplicada;
+	}
+
+
 	
 	
 	

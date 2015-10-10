@@ -1,6 +1,7 @@
 package com.allthenight.model.requerimiento;
 
 import com.allthenight.model.Elemento;
+import com.allthenight.model.Grupo;
 import com.allthenight.model.Viajero;
 
 public class RequerimientoElemento extends Requerimiento {
@@ -16,7 +17,6 @@ public class RequerimientoElemento extends Requerimiento {
 	}
 
 
-
 	public void setNombre(Elemento nombre) {
 		this.nombre = nombre;
 	}
@@ -28,7 +28,6 @@ public class RequerimientoElemento extends Requerimiento {
 	}
 
 
-
 	public void setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
 	}
@@ -38,6 +37,13 @@ public class RequerimientoElemento extends Requerimiento {
 	@Override
 	protected Boolean cumple(Viajero viajero) {
 		return Boolean.TRUE;
+	}
+
+
+
+	@Override
+	public Boolean esComplicadoPara(Grupo grupo) {
+		return null;
 	}
 
 }

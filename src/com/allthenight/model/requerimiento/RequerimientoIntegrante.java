@@ -3,6 +3,7 @@ package com.allthenight.model.requerimiento;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.allthenight.model.Grupo;
 import com.allthenight.model.Viajero;
 import com.allthenight.model.raza.Raza;
 
@@ -32,6 +33,12 @@ public class RequerimientoIntegrante extends Requerimiento {
 	@Override
 	protected Boolean cumple(Viajero viajero) {
 		return Boolean.TRUE;
+	}
+
+	@Override
+	public Boolean esComplicadoPara(Grupo grupo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

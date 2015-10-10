@@ -25,5 +25,7 @@ public abstract class Requerimiento {
 	
 	protected abstract Boolean cumple(Viajero viajero);
 
+	public abstract Boolean esComplicadoPara(Grupo grupo);
+
 }
 
