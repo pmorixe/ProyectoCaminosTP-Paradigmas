@@ -1,5 +1,81 @@
 package com.allthenight.model;
 
+import java.util.List;
+
 public class Zona {
+	
+	
+	private String nombre;
+	private Integer cantidadOrcos;
+	private Integer longitud;
+	private List<Zona> zonasLimitrofes;
+	private List<Requerimiento> requerimientos;
+	
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+	public Integer getCantidadOrcos() {
+		return cantidadOrcos;
+	}
+
+
+
+	public void setCantidadOrcos(Integer cantidadOrcos) {
+		this.cantidadOrcos = cantidadOrcos;
+	}
+
+
+
+	public Integer getLongitud() {
+		return longitud;
+	}
+
+
+
+	public void setLongitud(Integer longitud) {
+		this.longitud = longitud;
+	}
+
+
+
+	public List<Zona> getZonasLimitrofes() {
+		return zonasLimitrofes;
+	}
+
+
+
+	public void setZonasLimitrofes(List<Zona> zonasLimitrofes) {
+		this.zonasLimitrofes = zonasLimitrofes;
+	}
+
+
+
+	public List<Requerimiento> getRequerimientos() {
+		return requerimientos;
+	}
+
+
+
+	public void setRequerimientos(List<Requerimiento> requerimientos) {
+		this.requerimientos = requerimientos;
+	}
+
+
+
+	public Boolean puedeAtravezar(Grupo grupo){
+		return Boolean.TRUE;
+	}
+	
 
 }
