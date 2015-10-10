@@ -4,6 +4,7 @@ import com.allthenight.model.Exigencia;
 import com.allthenight.model.ExigenciaVelocidad;
 import com.allthenight.model.ExigenciaMagia;
 import com.allthenight.model.ExigenciaNivel;
+import com.allthenight.model.Zona;
 
 public class Main {
 
@@ -15,6 +16,8 @@ public class Main {
 		
 		Exigencia[] lista = {ex1 ,ex2, ex3};
 		
+		
+		Zona zona = new Zona();
 
 	}
 

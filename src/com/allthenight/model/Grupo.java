@@ -1,12 +1,13 @@
 package com.allthenight.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Grupo {
 	
 	private String name;
 	
-	private List<Viajero> viajeros;
+	private List<Viajero> viajeros =  new ArrayList<Viajero>();
 
 	public String getName() {
 		return name;
