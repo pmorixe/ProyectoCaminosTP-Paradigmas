@@ -2,19 +2,19 @@ package com.allthenight.model;
 
 public class RequerimientoElemento extends Requerimiento {
 
-	private String nombre;
+	private Elemento nombre;
 	
 	private Integer cantidad;
 	
 	
 	
-	public String getNombre() {
+	public Elemento getNombre() {
 		return nombre;
 	}
 
 
 
-	public void setNombre(String nombre) {
+	public void setNombre(Elemento nombre) {
 		this.nombre = nombre;
 	}
 
@@ -33,7 +33,7 @@ public class RequerimientoElemento extends Requerimiento {
 
 
 	@Override
-	protected Boolean cumple() {
+	protected Boolean cumple(Viajero viajero) {
 		return Boolean.TRUE;
 	}
 

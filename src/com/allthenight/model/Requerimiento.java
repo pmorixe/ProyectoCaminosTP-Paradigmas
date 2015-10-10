@@ -5,8 +5,8 @@ import java.util.List;
 public abstract class Requerimiento {
 	
 	
-	public Boolean cumpleRequerimiento(List<?> viajeros){
-		for (Object viajero : viajeros) {
+	public Boolean cumpleRequerimiento(List<Viajero> viajeros){
+		for (Viajero viajero : viajeros) {
 			cumpleRequerimiento(viajero);
 		}
 		return Boolean.TRUE;
@@ -16,11 +16,11 @@ public abstract class Requerimiento {
 		return Boolean.TRUE;
 	}
 	
-	public Boolean cumpleRequerimiento(Object viajero) {
+	public Boolean cumpleRequerimiento(Viajero viajero) {
 		return Boolean.TRUE;
 	}
 	
-	protected abstract Boolean cumple();
+	protected abstract Boolean cumple(Viajero viajero);
 
 }
 

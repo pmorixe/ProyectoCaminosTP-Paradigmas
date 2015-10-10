@@ -4,15 +4,15 @@ import java.util.List;
 
 public class RequerimientoIntegrante extends Requerimiento {
 	
-	private Object raza;
+	private Raza raza;
 	
 	private List<Exigencia> exigencias;
 
-	public Object getRaza() {
+	public Raza getRaza() {
 		return raza;
 	}
 
-	public void setRaza(Object raza) {
+	public void setRaza(Raza raza) {
 		this.raza = raza;
 	}
 
@@ -24,8 +24,9 @@ public class RequerimientoIntegrante extends Requerimiento {
 		this.exigencias = exigencias;
 	}
 
+
 	@Override
-	protected Boolean cumple() {
+	protected Boolean cumple(Viajero viajero) {
 		return Boolean.TRUE;
 	}
 

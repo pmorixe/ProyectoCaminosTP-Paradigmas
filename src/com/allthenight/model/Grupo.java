@@ -6,7 +6,7 @@ public class Grupo {
 	
 	private String name;
 	
-	private List<?> viajeros;
+	private List<Viajero> viajeros;
 
 	public String getName() {
 		return name;
@@ -16,11 +16,11 @@ public class Grupo {
 		this.name = name;
 	}
 
-	public List<?> getViajeros() {
+	public List<Viajero> getViajeros() {
 		return viajeros;
 	}
 
-	public void setViajeros(List<?> viajeros) {
+	public void setViajeros(List<Viajero> viajeros) {
 		this.viajeros = viajeros;
 	}
 
