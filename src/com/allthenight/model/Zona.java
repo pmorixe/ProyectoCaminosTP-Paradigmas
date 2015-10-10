@@ -1,17 +1,18 @@
 package com.allthenight.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Zona {
 	
-	
+	/*-------Atributos------------------*/
 	private String nombre;
 	private Integer cantidadOrcos;
 	private Integer longitud;
-	private List<Zona> zonasLimitrofes;
-	private List<Requerimiento> requerimientos;
+	private List<Zona> zonasLimitrofes = new ArrayList<Zona>();
+	private List<Requerimiento> requerimientos = new ArrayList<Requerimiento>();
 	
-	
+	/*----------Metodos-------------------*/
 	
 	public String getNombre() {
 		return nombre;
@@ -76,6 +77,14 @@ public class Zona {
 	public Boolean puedeAtravezar(Grupo grupo){
 		return Boolean.TRUE;
 	}
-	
 
+
+	public Integer getAspereza(){
+		return (this.cantidadOrcos/this.zonasLimitrofes.size());
+	}
+
+
+	
+	
+	
 }

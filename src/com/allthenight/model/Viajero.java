@@ -1,12 +1,13 @@
 package com.allthenight.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Viajero {
 	/*-------Atributos------------------*/
 	private Integer vida;
 	private Integer nivel;
-	private List<Elemento> elementos;
+	private List<Elemento> elementos = new ArrayList<Elemento>();
 	private Raza raza;
 	/*----------Metodos-------------------*/
 	public Integer getVida() {
