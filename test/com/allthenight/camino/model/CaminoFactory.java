@@ -45,5 +45,27 @@ public class CaminoFactory {
 		return camino;		
 	}
 	
-
+	public Camino createCaminoSinDificultad_DeElemento(){
+		Camino camino = new Camino();
+		Zona unaZona = new Zona();
+		
+		RequerimientoElemento requerimientoElementoFacil = requerimientoFactory.requerimientoElementoFacil();
+		unaZona.getRequerimientos().add(requerimientoElementoFacil);
+		
+		camino.add(unaZona);
+		
+		return camino;
+	}
+	
+	public Camino createCaminoConDificultad_DeElemento(){
+		Camino camino = new Camino();
+		Zona unaZona = new Zona();
+		
+		RequerimientoElemento requerimientoElementoAvanzado = requerimientoFactory.requerimientoElementoAvanzado();
+		unaZona.getRequerimientos().add(requerimientoElementoAvanzado);
+		
+		camino.add(unaZona);
+		
+		return camino;
+	}
 }

@@ -26,6 +26,7 @@ public class CaminoTest {
 	
 	private GrupoFactory grupoFactory =  new GrupoFactory();
 	private CaminoFactory caminoFactory = new CaminoFactory();
+	private ElementoFactory elementoFactory = new ElementoFactory();
 
 	@Test
 	public void testEsDificilPara_ZonaSinDificultad_ConRequerimientoDeIntegrante() {
@@ -55,6 +56,24 @@ public class CaminoTest {
 		Assert.assertTrue(esDificil);
 	}
 
+	@Test
+	public void testEsDificilPara_ZonaSinDificultad(){
+		//Given
+		Camino caminoFacil = caminoFactory.createCaminoSinDificultad_DeElemento();
+		Grupo comunidadDelAnillo = grupoFactory.comunidadDelAnillo();
+		//When
+		Boolean esDificil = caminoFacil.esDificilPara(comunidadDelAnillo);
+		//Then
+		Assert.assertFalse(esDificil);
+	}
 	
-
+	public void testEsDificilPara_ZonaConDificultad(){
+		//Given
+		Camino caminoDificil = caminoFactory.createCaminoConDificultad_DeElemento();
+		Grupo comunidadDelAnilli = grupoFactory.comunidadDelAnillo();
+		//When
+		Boolean esDificil = caminoDificil.esDificilPara(comunidadDelAnilli);
+		//Then
+		Assert.assertTrue(esDificil);
+	}
 }
