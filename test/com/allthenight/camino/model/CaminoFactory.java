@@ -1,8 +1,8 @@
 package com.allthenight.camino.model;
 
 import com.allthenight.grupo.factory.ElementoFactory;
-import com.allthenight.grupo.factory.RequerimientoFactory;
 import com.allthenight.raza.model.Enano;
+import com.allthenight.requerimiento.factory.RequerimientoFactory;
 import com.allthenight.requerimiento.model.ExigenciaNivel;
 import com.allthenight.requerimiento.model.Requerimiento;
 import com.allthenight.requerimiento.model.RequerimientoElemento;

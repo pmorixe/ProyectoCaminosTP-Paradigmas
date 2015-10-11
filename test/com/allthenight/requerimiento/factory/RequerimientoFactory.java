@@ -1,5 +1,6 @@
-package com.allthenight.grupo.factory;
+package com.allthenight.requerimiento.factory;
 
+import com.allthenight.grupo.factory.ElementoFactory;
 import com.allthenight.requerimiento.model.ExigenciaMagia;
 import com.allthenight.requerimiento.model.ExigenciaNivel;
 import com.allthenight.requerimiento.model.ExigenciaVelocidad;

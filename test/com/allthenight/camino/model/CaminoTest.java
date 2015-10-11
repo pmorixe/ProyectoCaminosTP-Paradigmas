@@ -28,7 +28,7 @@ public class CaminoTest {
 	private ElementoFactory elementosFactory =  new ElementoFactory();
 
 	@Test
-	public void testEsDificilPara_Grupo() {
+	public void testEsDificilPara_GrupoComunidadDelAnillo() {
 		//Given
 		Camino caminoDificil = getCaminoDificil();
 		Grupo comunidadDelAnillo = grupoFactory.comunidadDelAnillo();
