@@ -8,19 +8,9 @@ import com.allthenight.raza.model.Raza;
 
 public class RequerimientoIntegrante extends Requerimiento {
 	
-	private Raza raza;
-	
 	private Exigencia exigencia;
 	
 	private Integer integrantesNecesario = 1;
-
-	public Raza getRaza() {
-		return raza;
-	}
-
-	public void setRaza(Raza raza) {
-		this.raza = raza;
-	}
 
 	public Exigencia getExigencia() {
 		return exigencia;
