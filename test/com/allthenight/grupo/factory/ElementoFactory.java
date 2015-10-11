@@ -43,7 +43,14 @@ public class ElementoFactory {
 				capa());
 	}
 	
-
+	public List<Elemento> equipamientoGigolo(){
+		return Arrays.asList(
+				cristal(),
+				shampeing(),
+				bastonDePolo(),
+				caballoDePolo(),
+				espada());
+	}
 
 
 	public Elemento createElemento(String el){
@@ -118,5 +125,32 @@ public class ElementoFactory {
 		return el;
 	}
 	
+	private Elemento cristal() {
+		// TODO Auto-generated method stub
+		Elemento el = new Elemento();
+		el.setNombre("cristal");
+		return el;
+	}
+
+	private Elemento shampeing() {
+		// TODO Auto-generated method stub
+		Elemento el = new Elemento();
+		el.setNombre("shampeing");
+		return el;
+	}
+
+	private Elemento bastonDePolo() {
+		// TODO Auto-generated method stub
+		Elemento el = new Elemento();
+		el.setNombre("baston de polo");
+		return el;
+	}
+
+	private Elemento caballoDePolo() {
+		// TODO Auto-generated method stub
+		Elemento el = new Elemento();
+		el.setNombre("caballo de polo");
+		return el;
+	}
 
 }

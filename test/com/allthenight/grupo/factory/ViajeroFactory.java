@@ -7,6 +7,7 @@ import com.allthenight.grupo.model.Elemento;
 import com.allthenight.grupo.model.Viajero;
 import com.allthenight.raza.model.Elfo;
 import com.allthenight.raza.model.Enano;
+import com.allthenight.raza.model.Gigolo;
 import com.allthenight.raza.model.Hobbit;
 import com.allthenight.raza.model.Humano;
 import com.allthenight.raza.model.Maiar;
@@ -59,6 +60,16 @@ public class ViajeroFactory {
 
 		return viajeroBuilder;
 	}
+	public Viajero obtenerGigolo(){
+		ViajeroBuilder viajeroBuilder = new ViajeroBuilder();
+		viajeroBuilder.
+		gigolo().
+		nivel(4).
+		vida(15).
+		elementos(elementosFactory.equipamientoGigolo());
+		
+		return viajeroBuilder;
+	}
 	
 	
 	
@@ -68,6 +79,12 @@ public class ViajeroFactory {
 
 		public ViajeroBuilder humano() {
 			this.setRaza(new Humano());
+			return this;
+		}
+
+		public ViajeroBuilder gigolo(){
+			// TODO Auto-generated method stub
+			this.setRaza(new Gigolo());
 			return this;
 		}
 
