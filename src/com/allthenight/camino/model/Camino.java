@@ -1,13 +1,14 @@
 package com.allthenight.camino.model;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.allthenight.grupo.model.Grupo;
 
 public class Camino {
 	
-	private List<Zona> zonas =  new ArrayList<Zona>();
+	private List<Zona> zonas =  new LinkedList<Zona>();
 
 	public List<Zona> getZonas() {
 		return zonas;
