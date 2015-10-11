@@ -25,12 +25,12 @@ import com.allthenight.requerimiento.model.RequerimientoIntegrante;
 public class CaminoTest {
 	
 	private GrupoFactory grupoFactory =  new GrupoFactory();
-	private ElementoFactory elementosFactory =  new ElementoFactory();
+	private CaminoFactory caminoFactory = new CaminoFactory();
 
 	@Test
-	public void testEsDificilPara_GrupoComunidadDelAnillo() {
+	public void testEsDificilPara_ZonaSinDificultad_ConRequerimientoDeIntegrante() {
 		//Given
-		Camino caminoDificil = getCaminoDificil();
+		Camino caminoDificil = caminoFactory.createCaminoSinDificultad_conDosRequerimientosDeIntegrante();
 		Grupo comunidadDelAnillo = grupoFactory.comunidadDelAnillo();
 		
 		//When
@@ -38,20 +38,23 @@ public class CaminoTest {
 		
 		
 		//Then
-		Assert.assertEquals(Boolean.TRUE, esDificil);
+		Assert.assertFalse(esDificil);
+	}
+	
+	@Test
+	public void testEsDificilPara_ZonaConDificultad_ConRequerimientoDeIntegrante() {
+		//Given
+		Camino caminoDificil = caminoFactory.createCaminoConDificultad_conDosRequerimientosDeIntegrante();
+		Grupo comunidadDelAnillo = grupoFactory.comunidadDelAnillo();
+		
+		//When
+		Boolean esDificil = caminoDificil.esDificilPara(comunidadDelAnillo);
 		
 		
+		//Then
+		Assert.assertTrue(esDificil);
 	}
 
 	
-
-	private Camino getCaminoDificil() {
-
-		Camino camino = new Camino();
-		CaminoFactory caminoFactory = new CaminoFactory();
-		caminoFactory.createCaminoDificl();
-		return camino;
-
-	}
 
 }

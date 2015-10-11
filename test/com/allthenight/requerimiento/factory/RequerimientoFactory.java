@@ -26,11 +26,11 @@ public class RequerimientoFactory {
 	}
 	
 	
-	public RequerimientoIntegrante requerimientoNivelminimo(Integer nivel){
+	public RequerimientoIntegrante requerimientoIntegrante_Nivelminimo(Integer nivel){
 		RequerimientoIntegrante requerimientoIntegrante = new RequerimientoIntegrante();
 		
 		requerimientoIntegrante.setIntegrantesNecesario(2);
-		requerimientoIntegrante.setExigencia(new ExigenciaNivel(nivel));
+		requerimientoIntegrante.addExigencia(new ExigenciaNivel(nivel));
 		
 		return requerimientoIntegrante;
 	}
@@ -39,7 +39,7 @@ public class RequerimientoFactory {
 		RequerimientoIntegrante requerimientoIntegrante = new RequerimientoIntegrante();
 		
 		requerimientoIntegrante.setIntegrantesNecesario(1);
-		requerimientoIntegrante.setExigencia(new ExigenciaMagia());
+		requerimientoIntegrante.addExigencia(new ExigenciaMagia());
 		
 		return requerimientoIntegrante;
 	}
@@ -48,7 +48,16 @@ public class RequerimientoFactory {
 		RequerimientoIntegrante requerimientoIntegrante = new RequerimientoIntegrante();
 		
 		requerimientoIntegrante.setIntegrantesNecesario(1);
-		requerimientoIntegrante.setExigencia(new ExigenciaVelocidad(velocidad));
+		requerimientoIntegrante.addExigencia(new ExigenciaVelocidad(velocidad));
+		
+		return requerimientoIntegrante;
+	}
+
+	public RequerimientoIntegrante requerimientoTieneMagia_TresIntegrantes() {
+		RequerimientoIntegrante requerimientoIntegrante = new RequerimientoIntegrante();
+		
+		requerimientoIntegrante.setIntegrantesNecesario(3);
+		requerimientoIntegrante.addExigencia(new ExigenciaMagia());
 		
 		return requerimientoIntegrante;
 	}
