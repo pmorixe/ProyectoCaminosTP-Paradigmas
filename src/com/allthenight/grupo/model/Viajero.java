@@ -47,5 +47,11 @@ public class Viajero {
 		this.elementos.addAll(elementos);
 		return this;
 	}
+	public Boolean getMagia() {
+		return this.getRaza().getMagia();
+	}
+	public Integer getVelocidad() {
+		return this.getRaza().getVelocidad();
+	}
 	
 }

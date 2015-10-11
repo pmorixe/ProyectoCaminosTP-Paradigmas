@@ -28,7 +28,7 @@ public class CaminoFactory {
 		requerimientoElemento.setCantidad(5);
 		
 		requerimientoIntegrante.setRaza(new Enano());
-		requerimientoIntegrante.getExigencias().add(new ExigenciaNivel());
+		requerimientoIntegrante.setExigencia(new ExigenciaNivel(8));
 		
 		zona1.getRequerimientos().add(requerimientoElemento);
 		zona2.getRequerimientos().add(requerimientoIntegrante);

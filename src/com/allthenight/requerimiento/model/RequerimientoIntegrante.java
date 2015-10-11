@@ -1,7 +1,6 @@
 package com.allthenight.requerimiento.model;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import com.allthenight.grupo.model.Grupo;
 import com.allthenight.grupo.model.Viajero;
@@ -11,8 +10,9 @@ public class RequerimientoIntegrante extends Requerimiento {
 	
 	private Raza raza;
 	
-	private List<Exigencia> exigencias = new ArrayList<Exigencia>();
-	private Integer integrantesNecesario;
+	private Exigencia exigencia;
+	
+	private Integer integrantesNecesario = 1;
 
 	public Raza getRaza() {
 		return raza;
@@ -22,12 +22,20 @@ public class RequerimientoIntegrante extends Requerimiento {
 		this.raza = raza;
 	}
 
-	public List<Exigencia> getExigencias() {
-		return exigencias;
+	public Exigencia getExigencia() {
+		return exigencia;
 	}
 
-	public void setExigencias(List<Exigencia> exigencias) {
-		this.exigencias = exigencias;
+	public void setExigencia(Exigencia exigencia) {
+		this.exigencia = exigencia;
+	}
+	
+	public Integer getIntegrantesNecesario() {
+		return integrantesNecesario;
+	}
+
+	public void setIntegrantesNecesario(Integer integrantesNecesario) {
+		this.integrantesNecesario = integrantesNecesario;
 	}
 
 
@@ -38,20 +46,19 @@ public class RequerimientoIntegrante extends Requerimiento {
 
 	@Override
 	public Boolean esComplicadoPara(Grupo grupo) {
-		// TODO Auto-generated method stub
 	 Integer integrantes = grupo.getViajeros().size();
-		if(getIntegrantesNecesario()-integrantes <=0){
+		if(integrantes < integrantesNecesario){
 			return Boolean.TRUE;
 		}
-		return Boolean.FALSE;
-	}
-
-	public Integer getIntegrantesNecesario() {
-		return integrantesNecesario;
-	}
-
-	public void setIntegrantesNecesario(Integer integrantesNecesario) {
-		this.integrantesNecesario = integrantesNecesario;
+		int cantidadCumplen=0;
+		for (Viajero viajero: grupo.getViajeros()) {
+			if (exigencia.cumpleExigencia(viajero))
+				cantidadCumplen++;
+		}
+		
+		Boolean esComplicado = integrantesNecesario > cantidadCumplen;
+		
+		return esComplicado;
 	}
 
 }
