@@ -45,4 +45,14 @@ public class GrupoFactory {
 		return grupoBuilder;
 	}
 
+	public Grupo losMaestrulis(){
+		GrupoBuilder grupoBuilder = new GrupoBuilder();
+		grupoBuilder.nombre("maestrulis").
+		sumarAlGrupo(viajeroFactory.obtenerHumano()).
+		sumarAlGrupo(viajeroFactory.obtenerHobbit()).
+		sumarAlGrupo(viajeroFactory.obtenerHumano()).
+		sumarAlGrupo(viajeroFactory.obtenerEnano());
+		
+		return grupoBuilder;
+	}
 }
