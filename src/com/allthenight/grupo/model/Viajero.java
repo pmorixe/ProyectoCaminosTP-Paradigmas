@@ -44,7 +44,7 @@ public class Viajero {
 		return this;
 	}
 	public Viajero equiparElementos(List<Elemento> elementos) {
-		elementos.addAll(elementos);
+		this.elementos.addAll(elementos);
 		return this;
 	}
 	

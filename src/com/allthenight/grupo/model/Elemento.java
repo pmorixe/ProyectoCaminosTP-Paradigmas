@@ -13,5 +13,17 @@ public class Elemento {
 		this.nombre = nombre;
 	}
 	
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+	if (obj ==null)
+		return false;
+	
+	if (!(obj instanceof Elemento)) 
+		return false;
+		
+	return this.nombre.equals(((Elemento) obj).getNombre());
+	}
 
 }

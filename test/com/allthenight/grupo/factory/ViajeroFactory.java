@@ -14,7 +14,7 @@ import com.allthenight.raza.model.Maiar;
 
 public class ViajeroFactory {
 
-	private ElementoFactory elementosFactory;
+	private ElementoFactory elementosFactory = new ElementoFactory();
 
 
 
@@ -70,6 +70,18 @@ public class ViajeroFactory {
 		
 		return viajeroBuilder;
 	}
+	
+	public Viajero obtenerGranjero() {
+		ViajeroBuilder viajeroBuilder = new ViajeroBuilder();
+		viajeroBuilder
+		.humano()
+		.nivel(5)
+		.vida(20)
+		.elementos(elementosFactory.createElemento(Arrays.asList("Rastrillo","Pala")));
+
+		return viajeroBuilder;
+	}
+	
 	
 	
 	
@@ -127,5 +139,10 @@ public class ViajeroFactory {
 		
 		
 	}
-	
+
+
+
+
+
+
 }

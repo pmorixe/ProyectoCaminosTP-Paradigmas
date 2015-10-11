@@ -36,9 +36,7 @@ public class GrupoFactory {
 	public Grupo granjeros() {
 		GrupoBuilder grupoBuilder = new GrupoBuilder();
 		grupoBuilder.nombre("Granjeros").
-		sumarAlGrupo(viajeroFactory.obtenerElfo()).
-		sumarAlGrupo(viajeroFactory.obtenerElfo()).
-		sumarAlGrupo(viajeroFactory.obtenerHumano()).
+		sumarAlGrupo(viajeroFactory.obtenerGranjero()).
 		sumarAlGrupo(viajeroFactory.obtenerEnano());
 		
 		
