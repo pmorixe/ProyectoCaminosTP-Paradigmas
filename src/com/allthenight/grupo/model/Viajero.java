@@ -54,4 +54,9 @@ public class Viajero {
 		return this.getRaza().getVelocidad();
 	}
 	
+	public Integer getFuerza() {
+		return this.getRaza().getFuerza();
+	}
+	
+	
 }

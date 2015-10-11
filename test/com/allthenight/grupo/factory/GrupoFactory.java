@@ -4,8 +4,7 @@ import com.allthenight.grupo.model.Grupo;
 
 public class GrupoFactory {
 	
-	private ViajeroFactory viajeroFactory= new ViajeroFactory();
-
+	private ViajeroFactory viajeroFactory = new ViajeroFactory();
 
 
 	public class GrupoBuilder extends Grupo{
@@ -14,9 +13,6 @@ public class GrupoFactory {
 			this.setName(nombre);
 			return this;
 		}
-
-
-		
 	}
 
 	public Grupo comunidadDelAnillo(){
