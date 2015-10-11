@@ -36,14 +36,22 @@ public class RequerimientoElemento extends Requerimiento {
 
 	@Override
 	protected Boolean cumple(Viajero viajero) {
-		return Boolean.TRUE;
+		return viajero.tiene(this.nombre);
 	}
 
 
-
+	public Boolean cumple(Grupo grupo){
+		if(grupo.obtenerCantidadDe(this.nombre)>=this.cantidad)
+			return Boolean.TRUE;
+		return Boolean.FALSE;
+	}
+	
 	@Override
 	public Boolean esComplicadoPara(Grupo grupo) {
-		return null;
+		if(grupo.getElementoDificil() == this.nombre)
+			return Boolean.TRUE;
+		return Boolean.FALSE;
+		
 	}
 
 }

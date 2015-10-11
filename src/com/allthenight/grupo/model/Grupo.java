@@ -9,6 +9,8 @@ public class Grupo {
 	
 	private List<Viajero> viajeros =  new ArrayList<Viajero>();
 
+	private Elemento elementoDificil;
+	
 	public String getName() {
 		return name;
 	}
@@ -48,6 +50,14 @@ public class Grupo {
 	public Grupo incorporarGrupo(Grupo grupo) {
 		viajeros.addAll(grupo.getViajeros());
 		return this;
+	}
+
+	public Elemento getElementoDificil() {
+		return elementoDificil;
+	}
+
+	public void setElementoDificil(Elemento elementoDificil) {
+		this.elementoDificil = elementoDificil;
 	}
 
 }
