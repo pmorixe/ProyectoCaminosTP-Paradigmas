@@ -14,6 +14,8 @@ import com.allthenight.grupo.factory.ViajeroFactory;
 import com.allthenight.grupo.model.Elemento;
 import com.allthenight.grupo.model.Grupo;
 import com.allthenight.grupo.model.Viajero;
+import com.allthenight.raza.model.Elfo;
+import com.allthenight.raza.model.Enano;
 
 public class GrupoTest {
 

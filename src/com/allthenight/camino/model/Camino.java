@@ -34,4 +34,9 @@ public class Camino {
 		return esDificil;
 	}
 
+	public Camino add(Zona zona) {
+		zonas.add(zona);
+		return this;
+	}
+
 }
