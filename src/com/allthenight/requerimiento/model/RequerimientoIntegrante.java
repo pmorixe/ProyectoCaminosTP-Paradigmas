@@ -36,19 +36,10 @@ public class RequerimientoIntegrante extends Requerimiento {
 
 	@Override
 	public Boolean esComplicadoPara(Grupo grupo) {
+		
 	 Integer integrantes = grupo.getViajeros().size();
-		if(integrantes < integrantesNecesario){
-			return Boolean.TRUE;
-		}
-		int cantidadCumplen=0;
-		for (Viajero viajero: grupo.getViajeros()) {
-			if (exigencia.cumpleExigencia(viajero))
-				cantidadCumplen++;
-		}
-		
-		Boolean esComplicado = integrantesNecesario > cantidadCumplen;
-		
-		return esComplicado;
+	 
+	 return integrantesNecesario > integrantes/2;
 	}
 
 }

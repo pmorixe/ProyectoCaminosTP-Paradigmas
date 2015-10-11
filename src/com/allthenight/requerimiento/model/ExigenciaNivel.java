@@ -9,7 +9,6 @@ public class ExigenciaNivel implements Exigencia {
 	public ExigenciaNivel(Integer nivel) {
 		this.nivelMinimo = nivel;
 	}
-	
 
 	@Override
 	public Boolean cumpleExigencia(Viajero viajero) {

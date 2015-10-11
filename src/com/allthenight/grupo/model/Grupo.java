@@ -9,7 +9,7 @@ public class Grupo {
 	
 	private List<Viajero> viajeros =  new ArrayList<Viajero>();
 
-	private Elemento elementoDificil;
+	private List<Elemento> elementosDificil = new ArrayList<Elemento>();
 	
 	public String getName() {
 		return name;
@@ -52,12 +52,12 @@ public class Grupo {
 		return this;
 	}
 
-	public Elemento getElementoDificil() {
-		return elementoDificil;
+	public List<Elemento> getElementosDificil() {
+		return elementosDificil;
 	}
 
-	public void setElementoDificil(Elemento elementoDificil) {
-		this.elementoDificil = elementoDificil;
+	public void setElementoDificil(List<Elemento> elementoDificil) {
+		this.elementosDificil = elementoDificil;
 	}
 
 }

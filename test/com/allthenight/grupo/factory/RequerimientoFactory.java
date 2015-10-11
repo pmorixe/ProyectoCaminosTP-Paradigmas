@@ -13,14 +13,14 @@ public class RequerimientoFactory {
 	public RequerimientoElemento requerimientoElementoAvanzado(){
 		RequerimientoElemento requerimientoElemento = new RequerimientoElemento();
 		requerimientoElemento.setCantidad(4);
-		requerimientoElemento.setNombre(elementoFactory.arco());
+		requerimientoElemento.setElemento(elementoFactory.arco());
 		return requerimientoElemento;
 	}
 
 	public RequerimientoElemento requerimientoElementoFacil(){
 		RequerimientoElemento requerimientoElemento = new RequerimientoElemento();
 		requerimientoElemento.setCantidad(2);
-		requerimientoElemento.setNombre(elementoFactory.espada());
+		requerimientoElemento.setElemento(elementoFactory.espada());
 		return requerimientoElemento;
 	}
 	

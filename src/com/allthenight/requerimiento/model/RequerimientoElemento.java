@@ -6,19 +6,19 @@ import com.allthenight.grupo.model.Viajero;
 
 public class RequerimientoElemento extends Requerimiento {
 
-	private Elemento nombre;
+	private Elemento elemento;
 	
 	private Integer cantidad;
 	
 	
 	
-	public Elemento getNombre() {
-		return nombre;
+	public Elemento getElemento() {
+		return elemento;
 	}
 
 
-	public void setNombre(Elemento nombre) {
-		this.nombre = nombre;
+	public void setElemento(Elemento nombre) {
+		this.elemento = nombre;
 	}
 
 
@@ -36,22 +36,17 @@ public class RequerimientoElemento extends Requerimiento {
 
 	@Override
 	protected Boolean cumple(Viajero viajero) {
-		return viajero.tiene(this.nombre);
+		return viajero.tiene(this.elemento);
 	}
 
 
 	public Boolean cumple(Grupo grupo){
-		if(grupo.obtenerCantidadDe(this.nombre)>=this.cantidad)
-			return Boolean.TRUE;
-		return Boolean.FALSE;
+		return grupo.obtenerCantidadDe(this.elemento)>=this.cantidad;
 	}
 	
 	@Override
 	public Boolean esComplicadoPara(Grupo grupo) {
-		if(grupo.getElementoDificil() == this.nombre)
-			return Boolean.TRUE;
-		return Boolean.FALSE;
-		
+		return grupo.getElementosDificil().contains(elemento);
 	}
 
 }
